@@ -62,7 +62,7 @@ body {
 	border-radius: 25px;
 	background-color: rgb(255 252 244);
 	font-size: calc(13px + 9 * ((100vw - 320px) / (1880 - 320)));
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: 2px;
 	line-height: 20px;
 	transition: ease-in-out 0.3s;
