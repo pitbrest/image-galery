@@ -48,7 +48,7 @@ body {
 }
 .header-left img:hover {	
 	filter: invert(245%) sepia(5%) saturate(116%) hue-rotate(385deg) brightness(116%) contrast(137%);
-	transform: rotate(360deg);	
+	transform: rotate(-360deg);	
 }
 .search-box {
 	width: 25vw;
