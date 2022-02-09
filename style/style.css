@@ -19,7 +19,7 @@ body {
 /****** HEADER ******/
 /********************/
 header {
-	background: linear-gradient(to top, rgb(255, 255, 255), rgb(199, 199, 199));
+	background-color: rgb(209 222 245);
 }
 .header {
 	display: flex;
@@ -79,7 +79,7 @@ header {
 	transition: background-color ease-in-out 0.3s;
 }
 .search-box input:focus {
-	box-shadow: 0 0 10px 4px rgb(122, 122, 122);
+	box-shadow: 0 0 10px 4px rgb(119 161 235);
 	background-color: #fff;
 	transition: box-shadow ease-in-out 0.3s;	
 }
@@ -144,7 +144,7 @@ main {
 /********************/
 
 footer {
-	background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(211, 211, 211));
+	background-color: rgb(209 222 245);
 }
 .footer {
 	display: flex;
