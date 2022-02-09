@@ -1,18 +1,24 @@
-const url = 'https://api.unsplash.com/search/photos?query=осень&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
+// Запрос на API, где data - это данные от сервера (они доступны только внутри запроса т.е. функции getData, 
+// поэтому чтобы использовать полученные запросом данные для создания элементов, функция создания элементов 
+// должна либо полностью находиться внутри запроса либо вызываться внутри запроса, тут реализован второй вариант)
+
+let url = 'https://api.unsplash.com/search/photos?query=осень&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
 
 async function getData() {
-	const res = await fetch(url);
-	const data = await res.json();	
-	console.log(data);	
-	let array = data.results.map(result => result.urls.regular)
-	for(let item of array) {
-		showData(item)
-	}
+	let res = await fetch(url);
+	let data = await res.json();
+	console.log(data);
+
+	let array = data.results.map(result => result.urls.regular)   // через map оставляем от приходящего
+	for (let item of array) {												  // от сервера объекта данных массив объектов   
+		showData(item)															  // с адресами изображений с размером regular
+																					  // и для каждого элемента массива вызываем функцию
+	}																				  // создания изображения
 	
 }
 getData()
 
-// Генерация элементов
+// Генерация элементов (создание изображения где item - это url изображения, который мы получаем в запросе выше)
 
 function showData(item) {
 
@@ -25,12 +31,25 @@ function showData(item) {
 	galleryContainer.append(img);
 }
 
+// Получаем значение поля ввода (input type='text') чтобы использовать его в запросе на сервер по ключевым словам
+
+let input = document.getElementById('input')
+let output = input.value 
+
+function searching() {	
+
+	window.addEventListener ('keydown', function(event) {
+		if (event.keyCode === 13) {
+			url = 'https://api.unsplash.com/search/photos?query=' + input.value + '&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
+		getData()		
+		}
+	})	
+}
+searching()
 
 
 
 
 
-/* 
-const img = `<img class="gallery-img" src="полученный от API адрес изображения" alt="image">`;
-galleryContainer.insertAdjacentHTML('beforeend', img); 
-*/
+
+
