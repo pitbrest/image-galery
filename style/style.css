@@ -52,6 +52,16 @@ body {
 	width: 25vw;
 	min-width: 200px;
 	position: relative;
+	z-index: 10;
+}
+.search-box i{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-12.5px);
+	right: 4%;
+	background-color: transparent;
+	width: 35px;
+	height: 26px;
 }
 .search-box input {
 	width: 100%;
@@ -74,15 +84,15 @@ body {
 .img-search::before {
 	content: "";
 	position: absolute;
-	top: 25%;
-	bottom: 30%;
+	top: 50%;
+	transform: translateY(-12.5px);	
 	right: 2%;
 	background: url(../assets/svg/search.svg) no-repeat center;
 	filter: invert(30%) sepia(5%) saturate(10%) hue-rotate(40deg) brightness(189%) contrast(87%);
 	width: 25px;
 	height: 25px;
 	background-color: transparent;	
-	transition: ease-in-out 0.3s;
+	transition: background-color ease-in-out 0.3s;
 }
 .search-box:hover .img-search::before,
 input:focus .img-search::before {

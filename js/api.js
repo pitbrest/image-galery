@@ -12,9 +12,9 @@ async function getData() {
 	let array = data.results.map(result => result.urls.regular)   // через map оставляем от приходящего
 	for (let item of array) {												  // от сервера объекта данных массив объектов   
 		showData(item)															  // с адресами изображений с размером regular
-																					  // и для каждого элемента массива вызываем функцию
+		// и для каждого элемента массива вызываем функцию
 	}																				  // создания изображения
-	
+
 }
 getData()
 
@@ -30,24 +30,6 @@ function showData(item) {
 	img.alt = `image`;
 	galleryContainer.append(img);
 }
-
-// Получаем значение поля ввода (input type='text') чтобы использовать его в запросе на сервер по ключевым словам
-
-let input = document.getElementById('input')
-let output = input.value 
-
-function searching() {	
-
-	window.addEventListener ('keydown', function(event) {
-		if (event.keyCode === 13) {
-			url = 'https://api.unsplash.com/search/photos?query=' + input.value + '&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
-		getData()		
-		}
-	})	
-}
-searching()
-
-
 
 
 
