@@ -3,7 +3,7 @@ body {
 	font-family: "Urbanist", sans-serif;
 	color: #787877;
 	background-color: #ead697;
-	font-size: calc(14px + 8 * ((100vw - 320px) / (1880 - 320)));	
+	font-size: calc(14px + 8 * ((100vw - 320px) / (1880 - 320)));
 	letter-spacing: 1.3px;
 	font-weight: 600;
 }
@@ -19,13 +19,13 @@ body {
 /****** HEADER ******/
 /********************/
 header {
-	background: linear-gradient(to top, #ead697,#e1b52b);
+	background-color: #e5d2ad;
 }
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 5px;	
+	padding: 10px 5px;
 }
 .header-title {
 	font-size: calc(16px + 16 * ((100vw - 320px) / (1880 - 320)));
@@ -42,13 +42,13 @@ header {
 	justify-content: center;
 	align-items: center;
 }
-.header-left img {		
-	transition: ease-in-out 0.5s;	
+.header-left img {
+	transition: ease-in-out 0.5s;
 }
-.header-left img:hover {	
+.header-left img:hover {
 	filter: invert(245%) sepia(5%) saturate(116%) hue-rotate(385deg) brightness(116%) contrast(137%);
-	transform: rotate(-360deg);	
-	transition: all ease-in-out 0.5s;	
+	transform: rotate(-360deg);
+	transition: all ease-in-out 0.5s;
 }
 .search-box {
 	width: 25vw;
@@ -56,13 +56,13 @@ header {
 	position: relative;
 	z-index: 10;
 }
-.search-box i{
+.img-search {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-12.5px);
 	right: 4%;
 	background-color: transparent;
-	width: 35px;
+	width: 30px;
 	height: 26px;
 }
 .search-box input {
@@ -74,32 +74,47 @@ header {
 	font-size: calc(13px + 9 * ((100vw - 320px) / (1880 - 320)));
 	font-weight: 500;
 	letter-spacing: 2px;
-	line-height: 20px;	
+	line-height: 20px;
 	color: #302e2ec9;
 	transition: background-color ease-in-out 0.3s;
 }
 .search-box input:focus {
-	box-shadow: rgb(233, 225, 8);
+	box-shadow: 0 0 10px 10px rgb(255 250 234);
 	background-color: #fff;
-	transition: box-shadow ease-in-out 0.3s;	
+	transition: box-shadow ease-in-out 0.3s;
+}
+.search-box .clear-search {
+	position: absolute;
+	margin-right: 10px;
+	top: 50%;
+	transform: translateY(-14px);
+	right: 10%;
+	background: url(../assets/svg/searchClear.svg) no-repeat center;
+	filter: invert(30%) sepia(5%) saturate(10%) hue-rotate(40deg) brightness(189%) contrast(87%);
+	width: 28px;
+	height: 28px;
+	transition: filter ease-in-out 0.5s;
+}
+.search-box .clear-search:hover {
+	filter: invert(0%) sepia(5%) saturate(10%) hue-rotate(40deg) brightness(189%) contrast(87%);
+	transition: ease-in-out 0.5s;
 }
 .img-search::before {
 	content: "";
 	position: absolute;
 	top: 50%;
-	transform: translateY(-12.5px);	
-	right: 2%;
+	transform: translateY(-12.5px);
+	right: 0;
 	background: url(../assets/svg/search.svg) no-repeat center;
 	filter: invert(30%) sepia(5%) saturate(10%) hue-rotate(40deg) brightness(189%) contrast(87%);
 	width: 25px;
 	height: 25px;
-	background-color: transparent;	
-	transition: background-color ease-in-out 0.3s;
+	background-color: transparent;
+	transition: background-color ease-in-out 0.5s;
 }
-.search-box:hover .img-search::before,
-input:focus .img-search::before {
-	filter: invert(0%) sepia(5%) saturate(10%) hue-rotate(40deg) brightness(189%) contrast(87%);
-	transition: ease-in-out 0.3s;
+.img-search:hover::before {
+	filter: invert(30%) sepia(5%) saturate(10%) hue-rotate(40deg) brightness(0%) contrast(87%);
+	transition: ease-in-out 0.5s;
 }
 @media (max-width: 480px) {
 	.header-title {
@@ -111,8 +126,8 @@ input:focus .img-search::before {
 /******* MAIN *******/
 /********************/
 
-main {	
-	padding: 50px 2.5px;	
+main {
+	padding: 50px 2.5px;
 	height: calc(100vh-140px);
 	min-height: calc(100vh-140px);
 	min-height: 84%;
@@ -121,7 +136,7 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;	
+	flex-wrap: wrap;
 	min-height: calc(100%-140px);
 	min-height: 84%;
 }
@@ -134,8 +149,11 @@ main {
 	flex: 1 1 470px;
 }
 @media (max-width: 480px) {
+	main {
+		padding: 25px 2.5px;		
+	}
 	.gallery-img {
-		min-width: 320px;		
+		min-width: 280px;
 	}
 }
 
@@ -144,7 +162,7 @@ main {
 /********************/
 
 footer {
-	background: linear-gradient(to bottom, #ead697,#e3c361);
+	background-color: #e5d2ad;
 }
 .footer {
 	display: flex;
@@ -152,13 +170,12 @@ footer {
 	align-items: center;
 	padding: 10px 20px;
 	height: 60px;
-	
 }
 .footer-left span:nth-child(2) {
 	padding: 0 10px;
 }
 .footer-left a {
-	font-weight: 900;	
+	font-weight: 900;
 	transition: ease-in-out 0.3s;
 }
 .footer-left a:hover {
@@ -169,14 +186,10 @@ footer {
 	filter: invert(67%) sepia(5%) saturate(10%) hue-rotate(40deg) brightness(130%) contrast(87%);
 	transition: ease-in-out 0.3s;
 }
-.footer-right a {		
-	transition: ease-in-out 0.3s;	
+.footer-right a {
+	transition: ease-in-out 0.3s;
 }
-.footer-right a:hover {	
+.footer-right a:hover {
 	filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(40deg) brightness(0%) contrast(100%);
-	transition: ease-in-out 0.3s;	
+	transition: ease-in-out 0.3s;
 }
-
-
-
-

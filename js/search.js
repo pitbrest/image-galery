@@ -52,7 +52,6 @@ function search() {
 			uRl = 'https://api.unsplash.com/search/photos?query=' + input.value + '&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
 
 			getData()
-
 		}
 	})
 
@@ -63,8 +62,16 @@ function search() {
 			uRl = 'https://api.unsplash.com/search/photos?query=' + input.value + '&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
 
 			getData()
-
 		}
 	})
 }
 search()
+
+
+// Опишем работу крестика из поля ввода, при клике по которому поле ввода будет очищаться
+
+let clearSearch = document.getElementById('clearSearch')
+
+clearSearch.addEventListener('click', () => {
+	input.value = ''
+})
