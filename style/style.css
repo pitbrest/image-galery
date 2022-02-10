@@ -2,7 +2,7 @@ html,
 body {
 	font-family: "Urbanist", sans-serif;
 	color: #787877;
-	background-color: #ead697;
+	background-color: #fff9ed59;
 	font-size: calc(14px + 8 * ((100vw - 320px) / (1880 - 320)));
 	letter-spacing: 1.3px;
 	font-weight: 600;
@@ -19,7 +19,7 @@ body {
 /****** HEADER ******/
 /********************/
 header {
-	background-color: #e5d2ad;
+	background-color: #ebe4d7;
 }
 .header {
 	display: flex;
@@ -148,6 +148,12 @@ main {
 	object-fit: cover;
 	flex: 1 1 470px;
 }
+@media (max-width: 768px) {	
+	.gallery-img {
+		width: 100%;
+		max-width: 768px;
+	}
+}
 @media (max-width: 480px) {
 	main {
 		padding: 25px 2.5px;		
@@ -162,7 +168,7 @@ main {
 /********************/
 
 footer {
-	background-color: #e5d2ad;
+	background-color: #ebe4d7;
 }
 .footer {
 	display: flex;
