@@ -49,7 +49,7 @@ function search() {
 	searchButton.addEventListener('click', () => {
 		if (input.value.length > 1) {
 			galleryContainer.innerHTML = ''
-			uRl = 'https://api.unsplash.com/search/photos?query=' + input.value + '&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
+			uRl = 'https://api.unsplash.com/search/photos?query=' + input.value + '&per_page=12&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
 
 			getData()
 		}
@@ -59,7 +59,7 @@ function search() {
 
 		if (event.keyCode === 13 && input.value.length > 1) {
 			galleryContainer.innerHTML = ''
-			uRl = 'https://api.unsplash.com/search/photos?query=' + input.value + '&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
+			uRl = 'https://api.unsplash.com/search/photos?query=' + input.value + '&per_page=12&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
 
 			getData()
 		}

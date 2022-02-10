@@ -2,7 +2,7 @@
 // поэтому чтобы использовать полученные запросом данные для создания элементов, функция создания элементов 
 // должна либо полностью находиться внутри запроса либо вызываться внутри запроса, тут реализован второй вариант)
 
-let url = 'https://api.unsplash.com/search/photos?query=осень&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
+let url = 'https://api.unsplash.com/search/photos?query=осень&per_page=12&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
 
 async function getData() {
 	let res = await fetch(url);
