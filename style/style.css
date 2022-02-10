@@ -205,3 +205,14 @@ footer {
 	filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(40deg) brightness(0%) contrast(100%);
 	transition: ease-in-out 0.3s;
 }
+@media (max-width: 480px) {
+	.footer {		
+		padding: 5px 20px;
+		height: 40px;
+	}
+	.rss-logo {
+		width: 70.7px;
+		height: 26.4px;
+	}
+
+}
