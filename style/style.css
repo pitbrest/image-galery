@@ -131,7 +131,11 @@ header {
 /********************/
 /******* MAIN *******/
 /********************/
-
+.main-container {
+	max-width: 1440px;
+	margin: 0 auto;
+	background-color: #e2e2e2;	
+}
 main {
 	padding: 50px 2.5px;
 	height: calc(100vh-140px);
