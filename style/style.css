@@ -2,7 +2,7 @@ html,
 body {
 	font-family: "Urbanist", sans-serif;
 	color: #787877;
-	background-color: white;
+	background-color: #ead697;
 	font-size: calc(14px + 8 * ((100vw - 320px) / (1880 - 320)));	
 	letter-spacing: 1.3px;
 	font-weight: 600;
@@ -19,7 +19,7 @@ body {
 /****** HEADER ******/
 /********************/
 header {
-	background-color: rgb(209 222 245);
+	background: linear-gradient(to top, #ead697,#e1b52b);
 }
 .header {
 	display: flex;
@@ -79,7 +79,7 @@ header {
 	transition: background-color ease-in-out 0.3s;
 }
 .search-box input:focus {
-	box-shadow: 0 0 10px 4px rgb(119 161 235);
+	box-shadow: rgb(233, 225, 8);
 	background-color: #fff;
 	transition: box-shadow ease-in-out 0.3s;	
 }
@@ -144,7 +144,7 @@ main {
 /********************/
 
 footer {
-	background-color: rgb(209 222 245);
+	background: linear-gradient(to bottom, #ead697,#e3c361);
 }
 .footer {
 	display: flex;

@@ -52,18 +52,18 @@ function search() {
 			uRl = 'https://api.unsplash.com/search/photos?query=' + input.value + '&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
 
 			getData()
-			input.value = ''
+
 		}
 	})
 
 	window.addEventListener('keydown', function (event) {
-		
+
 		if (event.keyCode === 13 && input.value.length > 1) {
 			galleryContainer.innerHTML = ''
 			uRl = 'https://api.unsplash.com/search/photos?query=' + input.value + '&client_id=t6jI0SUjDZOoil0m3Lp3woSwPds8XvNJcun7qmxySN8';
 
 			getData()
-			input.value = ''
+
 		}
 	})
 }
