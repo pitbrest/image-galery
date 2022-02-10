@@ -162,7 +162,7 @@ main {
 }
 @media (max-width: 480px) {
 	main {
-		padding: 25px 2.5px;		
+		padding: 2.5px 2.5px;		
 	}
 	.gallery-img {
 		max-width: 98vw;
